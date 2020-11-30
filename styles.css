@@ -1,3 +1,48 @@
+@media only screen and (max-width: 600px) {
+  header .black-bar {
+    display: none;
+  }
+  header .white-bar .bars {
+    display: inline-block !important;
+  }
+
+  .grid1 {
+    display: flex !important;
+    flex-flow: column;
+    padding: 4px;
+  }
+  .grid1 .tree, .grid1 .house, .grid1 .car {
+    left: 4px;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+  }
+  .grid2 {
+    display: flex !important;
+    flex-flow: column;
+    padding: 4px;
+  }
+  .grid2 .card {
+    padding: 8px !important;
+  }
+
+  .grid3 {
+    display: flex !important;
+    flex-flow: column;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .spacer2 {
+    display: none;
+  }
+
+  .spacer3 {
+    display: none;
+  }
+}
 div {
   background-color: red;
   opacity: 80%;
@@ -25,6 +70,27 @@ header .black-bar {
 }
 header .white-bar {
   background: white;
+}
+header .white-bar .left-items {
+  justify-self: start;
+}
+header .white-bar .right-items {
+  display: flex;
+  flex-flow: row;
+  justify-self: end;
+}
+header .white-bar .right-items .glass {
+  padding: 16px;
+  width: 16px;
+  height: 16px;
+  background-color: blue;
+}
+header .white-bar .right-items .bars {
+  display: none;
+  padding: 16px;
+  width: 16px;
+  height: 16px;
+  background-color: skyblue;
 }
 
 .grid1 {
@@ -62,6 +128,8 @@ header .white-bar {
 }
 .grid2 .title {
   grid-area: 1/1/span 1/span 4;
+  margin-bottom: 24px;
+  height: 30px;
 }
 .grid2 .card {
   padding: 12px;

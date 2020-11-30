@@ -1,3 +1,5 @@
+@use 'mobile';
+
 $black: black;
 $white: white;
 $gray: dimgray;
@@ -32,6 +34,31 @@ header {
 
   .white-bar {
     background: $white;
+
+    .left-items {
+      justify-self: start;
+    }
+
+    .right-items {
+      display: flex;
+      flex-flow: row;
+      justify-self: end;
+
+      .glass {
+        padding: 16px;
+        width: 16px;
+        height: 16px;
+        background-color: blue;
+      }
+
+      .bars {
+        display: none;
+        padding: 16px;
+        width: 16px;
+        height: 16px;
+        background-color: skyblue;
+      }
+    }
   }
 }
 
@@ -78,6 +105,8 @@ header {
 
   .title {
     grid-area: 1 / 1 / span 1 / span 4;
+    margin-bottom: 24px;
+    height: 30px;
   }
 
   .card {
@@ -120,6 +149,5 @@ footer {
     background: $black;
   }
 }
-
 
 

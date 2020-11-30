@@ -1,0 +1,70 @@
+$black: black;
+$white: white;
+$gray: dimgray;
+
+@media only screen and (max-width: 600px) {
+
+  header {
+    .black-bar {
+      display: none;
+    }
+
+    .white-bar {
+      .bars {
+        display: inline-block !important;
+      }
+    }
+  }
+
+  .grid1 {
+    display: flex !important;
+    flex-flow: column;
+    padding: 4px;
+
+    %item-position {
+      left: 4px;
+      right: 4px;
+      top: 4px;
+      bottom: 4px;
+    }
+
+    .car {
+      @extend %item-position;
+    }
+
+    .house {
+      @extend %item-position;
+    }
+
+    .tree {
+      @extend %item-position;
+    }
+  }
+
+  .grid2 {
+    display: flex !important;
+    flex-flow: column;
+    padding: 4px;
+
+    .card {
+      padding: 8px !important;
+    }
+  }
+
+  .grid3 {
+    display: flex !important;
+    flex-flow: column;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .spacer2 {
+    display: none;
+  }
+
+  .spacer3 {
+    display: none;
+  }
+}
