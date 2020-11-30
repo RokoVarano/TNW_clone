@@ -1,0 +1,125 @@
+$black: black;
+$white: white;
+$gray: dimgray;
+
+div {
+  background-color: red;
+  opacity: 80%;
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+header {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .black-bar {
+    background: $black;
+  }
+
+  .white-bar {
+    background: $white;
+  }
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+          "car house"
+          "car tree"
+  ;
+  padding: 4px;
+  gap: 4px 4px;
+
+  .car {
+    grid-area: car;
+  }
+
+  .house {
+    grid-area: house;
+  }
+
+  .tree {
+    grid-area: tree;
+  }
+}
+
+.wrapper {
+  width: 80%;
+  background-color: pink;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+
+  //Need to find a way to simplify the code below to make it look more DRY
+
+  .title {
+    grid-area: 1 / 1 / span 1 / span 4;
+  }
+
+  .card {
+    padding: 12px;
+  }
+}
+
+.spacer {
+  height: 90px;
+  margin: 15px;
+}
+
+.spacer2 {
+  margin: 15px;
+}
+
+.spacer3 {
+  height: 250px;
+  margin: 15px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+
+  //Need to find a way to simplify the code below to make it look more DRY
+
+  .card {
+    padding: 12px;
+  }
+}
+
+footer {
+  .gray {
+    background: $gray;
+  }
+
+  .black {
+    background: $black;
+  }
+}
+
+
+

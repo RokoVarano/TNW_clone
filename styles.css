@@ -1,0 +1,100 @@
+div {
+  background-color: red;
+  opacity: 80%;
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .black-bar {
+  background: black;
+}
+header .white-bar {
+  background: white;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "car house" "car tree";
+  padding: 4px;
+  gap: 4px 4px;
+}
+.grid1 .car {
+  grid-area: car;
+}
+.grid1 .house {
+  grid-area: house;
+}
+.grid1 .tree {
+  grid-area: tree;
+}
+
+.wrapper {
+  width: 80%;
+  background-color: pink;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid2 .title {
+  grid-area: 1/1/span 1/span 4;
+}
+.grid2 .card {
+  padding: 12px;
+}
+
+.spacer {
+  height: 90px;
+  margin: 15px;
+}
+
+.spacer2 {
+  margin: 15px;
+}
+
+.spacer3 {
+  height: 250px;
+  margin: 15px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid3 .card {
+  padding: 12px;
+}
+
+footer .gray {
+  background: dimgray;
+}
+footer .black {
+  background: black;
+}
+
+/*# sourceMappingURL=styles.css.map */
