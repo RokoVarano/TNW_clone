@@ -1,11 +1,16 @@
 $black: black;
 $white: white;
 $gray: dimgray;
+$caption_gray: darkgrey;
 
 div {
   background-color: red;
   opacity: 80%;
   display: flex;
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
@@ -23,15 +28,17 @@ body {
 .spacer4{
   margin: 25px;
 }
+
 header {
-  width: 100%;
+  max-width: 600px;
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 9;
+
   nav {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .black-bar {
@@ -58,6 +65,9 @@ header {
       }
       .image-left:hover {
         background: url(assets/animation-background.gif);
+      }
+      img {
+        width: 100%;
       }
     }
 
@@ -128,14 +138,108 @@ header {
   @extend %grid-flexbox;
 
   .title {
-    margin-bottom: 24px;
-    height: 30px;
+    text-decoration: none;
+
+    h1 {
+      color: red;
+      margin: 0 0 24px;
+      height: 30px;
+    }
   }
 
-  .card {
+  %card {
     padding: 10px;
+    display: flex;
+    height: 75px;
+
+    .picture {
+      width: 75px;
+      height: 100%;
+      margin-right: 20px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .text {
+      max-width: 80%;
+      flex-flow: column;
+    }
+
+    a {
+      h3 {
+        color: $black;
+        margin: 0;
+      }
+    }
+
+    footer {
+      display: flex;
+      padding-top: 5px;
+
+      h5 {
+        margin: 0 5px 0 0;
+        color: $caption_gray;
+      }
+    }
+  }
+
+  .card1 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/slack.jpg");
+    }
+  }
+
+  .card2 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/Playstation.jpg");
+    }
+  }
+
+  .card3 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/phones.png");
+    }
+  }
+
+  .card4 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/blackphone.jpg");
+    }
+  }
+
+  .card5 {
+    @extend %card;
+    .picture {
+      background-color: blue;
+    }
+  }
+
+  .card6 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/monkeys.png");
+    }
+  }
+
+  .card7 {
+    @extend %card;
+    .picture {
+      background-color: blue;
+    }
+  }
+
+  .card8 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/morephones.jpg");
+    }
   }
 }
+
 
 .spacer {
   display: none;

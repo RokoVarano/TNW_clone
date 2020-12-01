@@ -4,6 +4,10 @@ div {
   display: flex;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   margin: 0;
   padding: 0;
@@ -21,15 +25,15 @@ body {
 }
 
 header {
-  width: 100%;
+  max-width: 600px;
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 9;
 }
 header nav {
-  display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 header .black-bar {
   display: none;
@@ -55,6 +59,9 @@ header .white-bar .left-items .image-left {
 }
 header .white-bar .left-items .image-left:hover {
   background: url(assets/animation-background.gif);
+}
+header .white-bar .left-items img {
+  width: 100%;
 }
 header .white-bar .right-items {
   display: flex;
@@ -96,11 +103,64 @@ header .white-bar .right-items .bars {
 }
 
 .grid2 .title {
-  margin-bottom: 24px;
+  text-decoration: none;
+}
+.grid2 .title h1 {
+  color: red;
+  margin: 0 0 24px;
   height: 30px;
 }
-.grid2 .card {
+.grid2 .card8, .grid2 .card7, .grid2 .card6, .grid2 .card5, .grid2 .card4, .grid2 .card3, .grid2 .card2, .grid2 .card1 {
   padding: 10px;
+  display: flex;
+  height: 75px;
+}
+.grid2 .card8 .picture, .grid2 .card7 .picture, .grid2 .card6 .picture, .grid2 .card5 .picture, .grid2 .card4 .picture, .grid2 .card3 .picture, .grid2 .card2 .picture, .grid2 .card1 .picture {
+  width: 75px;
+  height: 100%;
+  margin-right: 20px;
+  background-size: cover;
+  background-position: center;
+}
+.grid2 .card8 .text, .grid2 .card7 .text, .grid2 .card6 .text, .grid2 .card5 .text, .grid2 .card4 .text, .grid2 .card3 .text, .grid2 .card2 .text, .grid2 .card1 .text {
+  max-width: 80%;
+  flex-flow: column;
+}
+.grid2 .card8 a h3, .grid2 .card7 a h3, .grid2 .card6 a h3, .grid2 .card5 a h3, .grid2 .card4 a h3, .grid2 .card3 a h3, .grid2 .card2 a h3, .grid2 .card1 a h3 {
+  color: black;
+  margin: 0;
+}
+.grid2 .card8 footer, .grid2 .card7 footer, .grid2 .card6 footer, .grid2 .card5 footer, .grid2 .card4 footer, .grid2 .card3 footer, .grid2 .card2 footer, .grid2 .card1 footer {
+  display: flex;
+  padding-top: 5px;
+}
+.grid2 .card8 footer h5, .grid2 .card7 footer h5, .grid2 .card6 footer h5, .grid2 .card5 footer h5, .grid2 .card4 footer h5, .grid2 .card3 footer h5, .grid2 .card2 footer h5, .grid2 .card1 footer h5 {
+  margin: 0 5px 0 0;
+  color: darkgrey;
+}
+.grid2 .card1 .picture {
+  background-image: url("assets/slack.jpg");
+}
+.grid2 .card2 .picture {
+  background-image: url("assets/Playstation.jpg");
+}
+.grid2 .card3 .picture {
+  background-image: url("assets/phones.png");
+}
+.grid2 .card4 .picture {
+  background-image: url("assets/blackphone.jpg");
+}
+.grid2 .card5 .picture {
+  background-color: blue;
+}
+.grid2 .card6 .picture {
+  background-image: url("assets/monkeys.png");
+}
+.grid2 .card7 .picture {
+  background-color: blue;
+}
+.grid2 .card8 .picture {
+  background-image: url("assets/morephones.jpg");
 }
 
 .spacer {
