@@ -1,10 +1,15 @@
 $black: black;
 $white: white;
 $gray: dimgray;
+$caption_gray: darkgrey;
 
 div {
   background-color: red;
   opacity: 80%;
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
@@ -114,11 +119,97 @@ header {
     }
   }
 
-  .card {
+  %card {
     padding: 10px;
+    display: flex;
+    height: 75px;
+    .picture {
+      width: 75px;
+      height: 100%;
+      margin-right: 20px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .text {
+      max-width: 80%;
+    }
+
+    a {
+      h3 {
+        color: $black;
+        margin: 0;
+      }
+    }
+
+    footer {
+      display: flex;
+      padding-top: 5px;
+
+      h5 {
+        margin: 0 5px 0 0;
+        color: $caption_gray;
+      }
+    }
   }
 
+  .card1 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/slack.jpg");
+    }
+  }
+
+  .card2 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/Playstation.jpg");
+    }
+  }
+
+  .card3 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/phones.png");
+    }
+  }
+
+  .card4 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/blackphone.jpg");
+    }
+  }
+
+  .card5 {
+    @extend %card;
+    .picture {
+      background-color: blue;
+    }
+  }
+
+  .card6 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/monkeys.png");
+    }
+  }
+
+  .card7 {
+    @extend %card;
+    .picture {
+      background-color: blue;
+    }
+  }
+
+  .card8 {
+    @extend %card;
+    .picture {
+      background-image: url("assets/morephones.jpg");
+    }
+  }
 }
+
 
 .spacer {
   display: none;
