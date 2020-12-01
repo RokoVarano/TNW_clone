@@ -1,16 +1,10 @@
+@use 'styles';
+
 @media only screen and (min-width: 601px) {
-
-  %display-flex {
-    display: flex !important;
-  }
-
-  %display-grid {
-    display: grid !important;
-  }
 
   header {
     .black-bar {
-      @extend %display-flex
+      display: flex
     }
 
     .white-bar {
@@ -21,7 +15,7 @@
   }
 
   .grid1 {
-    @extend %display-grid;
+    display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
@@ -47,7 +41,7 @@
   }
 
   .grid2 {
-    @extend %display-grid;
+    display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(4, 1fr);
 
@@ -59,23 +53,23 @@
   }
 
   .spacer1 {
-    @extend %display-flex;
+    display: flex;
     margin: 52px;
   }
 
   .spacer2 {
-    @extend %display-flex;
+    display: flex;
     margin: 15px;
   }
 
   .spacer3 {
-    @extend %display-flex;
+    display: flex;
     margin: 134px;
   }
 
 
   .grid3 {
-    @extend %display-grid;
+    display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(3, 1fr);
 

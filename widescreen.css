@@ -1,17 +1,156 @@
-/* Error: expected "}".
- *    ,
- * 15 |     display: grid; !important;
- *    |                    ^
- *    '
- *   widescreen.scss 15:20  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a    \2577 \a 15 \2502      display: grid; !important;\a    \2502                     ^\a    \2575 \a   widescreen.scss 15:20  root stylesheet';
+div {
+  background-color: red;
+  opacity: 80%;
 }
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .black-bar {
+  display: none;
+  background: black;
+}
+header .white-bar {
+  background: white;
+}
+header .white-bar .left-items {
+  justify-self: start;
+}
+header .white-bar .right-items {
+  display: flex;
+  flex-flow: row;
+  justify-self: end;
+}
+header .white-bar .right-items .bars, header .white-bar .right-items .glass {
+  padding: 16px;
+  width: 16px;
+  height: 16px;
+}
+header .white-bar .right-items .glass {
+  background-color: blue;
+}
+header .white-bar .right-items .bars {
+  background-color: skyblue;
+}
+
+.grid3, .grid2, .grid1 {
+  display: flex;
+  flex-flow: column;
+  padding: 4px;
+}
+
+.grid1 .tree, .grid1 .house, .grid1 .car {
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+}
+.wrapper {
+  width: 100%;
+  background-color: pink;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.grid2 .title {
+  margin-bottom: 24px;
+  height: 30px;
+}
+.grid2 .card {
+  padding: 10px;
+}
+
+.spacer {
+  display: none;
+}
+
+footer .gray {
+  background: dimgray;
+}
+footer .black {
+  background: black;
+}
+
+@media only screen and (min-width: 601px) {
+  header .black-bar {
+    display: flex;
+  }
+  header .white-bar .bars {
+    display: none;
+  }
+
+  .grid1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "car house" "car tree";
+    gap: 4px 4px;
+  }
+  .grid1 .car {
+    grid-area: car;
+  }
+  .grid1 .house {
+    grid-area: house;
+  }
+  .grid1 .tree {
+    grid-area: tree;
+  }
+
+  .wrapper {
+    max-width: 80%;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid2 .title {
+    grid-area: 1/1/span 1/span 4;
+    margin-bottom: 24px;
+    height: 30px;
+  }
+
+  .spacer1 {
+    display: flex;
+    margin: 52px;
+  }
+
+  .spacer2 {
+    display: flex;
+    margin: 15px;
+  }
+
+  .spacer3 {
+    display: flex;
+    margin: 134px;
+  }
+
+  .grid3 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid3 .card {
+    padding: 12px;
+  }
+}
+
+/*# sourceMappingURL=widescreen.css.map */
