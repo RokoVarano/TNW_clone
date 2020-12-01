@@ -16,6 +16,16 @@ body {
   justify-content: center;
 }
 
+.spacer4 {
+  margin: 25px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 9;
+}
 header nav {
   display: flex;
   flex-direction: row;
@@ -27,6 +37,9 @@ header .black-bar {
 }
 header .white-bar {
   background: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 header .white-bar .left-items {
   justify-self: start;
