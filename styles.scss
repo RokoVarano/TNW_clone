@@ -80,16 +80,12 @@ header {
     background-position: center;
     background-size: cover;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
 
     .gradient {
       color: $white;
       min-height: 30vh;
       width: 100%;
       background: linear-gradient(to top, $black 10%, transparent);
-      flex-direction: column;
-      align-content: flex-end;
       position: relative;
 
       .text-box {
@@ -98,7 +94,6 @@ header {
         bottom: 0;
 
         a {
-          text-decoration: none;
           color: $white;
           margin-bottom: 5px;
           h1 {

@@ -62,16 +62,12 @@ header .white-bar .right-items .bars {
   background-position: center;
   background-size: cover;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 .grid1 .city .gradient, .grid1 .nintendo .gradient, .grid1 .car .gradient {
   color: white;
   min-height: 30vh;
   width: 100%;
   background: linear-gradient(to top, black 10%, transparent);
-  flex-direction: column;
-  align-content: flex-end;
   position: relative;
 }
 .grid1 .city .gradient .text-box, .grid1 .nintendo .gradient .text-box, .grid1 .car .gradient .text-box {
@@ -80,7 +76,6 @@ header .white-bar .right-items .bars {
   bottom: 0;
 }
 .grid1 .city .gradient .text-box a, .grid1 .nintendo .gradient .text-box a, .grid1 .car .gradient .text-box a {
-  text-decoration: none;
   color: white;
   margin-bottom: 5px;
 }
