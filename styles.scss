@@ -105,13 +105,19 @@ header {
   @extend %grid-flexbox;
 
   .title {
-    margin-bottom: 24px;
-    height: 30px;
+    text-decoration: none;
+
+    h1 {
+      color: red;
+      margin: 0 0 24px;
+      height: 30px;
+    }
   }
 
   .card {
     padding: 10px;
   }
+
 }
 
 .spacer {

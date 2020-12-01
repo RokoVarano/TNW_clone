@@ -70,7 +70,11 @@ header .white-bar .right-items .bars {
 }
 
 .grid2 .title {
-  margin-bottom: 24px;
+  text-decoration: none;
+}
+.grid2 .title h1 {
+  color: red;
+  margin: 0 0 24px;
   height: 30px;
 }
 .grid2 .card {
