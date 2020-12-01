@@ -19,20 +19,20 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-            "car house"
-            "car tree";
+            "car nintendo"
+            "car city";
     gap: 4px 4px;
 
     .car {
       grid-area: car;
     }
 
-    .house {
-      grid-area: house;
+    .nintendo {
+      grid-area: nintendo;
     }
 
-    .tree {
-      grid-area: tree;
+    .city {
+      grid-area: city;
     }
   }
 

@@ -1,11 +1,15 @@
 div {
   background-color: red;
-  opacity: 80%;
+  display: flex;
+  flex-flow: row;
 }
 
 :root {
   margin: 0;
   padding: 0;
+  font-family: ARS Maquette, Helvetica Neue, Arial, sans-serif;
+  font-size: 14px;
+  color: black;
 }
 
 body {
@@ -53,12 +57,53 @@ header .white-bar .right-items .bars {
   padding: 4px;
 }
 
-.grid1 .tree, .grid1 .house, .grid1 .car {
-  left: 4px;
-  right: 4px;
-  top: 4px;
-  bottom: 4px;
+.grid1 .city, .grid1 .nintendo, .grid1 .car {
+  margin: 4px 0;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
+.grid1 .city .gradient, .grid1 .nintendo .gradient, .grid1 .car .gradient {
+  color: white;
+  min-height: 30vh;
+  width: 100%;
+  background: linear-gradient(to top, black 10%, transparent);
+  flex-direction: column;
+  align-content: flex-end;
+  position: relative;
+}
+.grid1 .city .gradient .text-box, .grid1 .nintendo .gradient .text-box, .grid1 .car .gradient .text-box {
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+}
+.grid1 .city .gradient .text-box a, .grid1 .nintendo .gradient .text-box a, .grid1 .car .gradient .text-box a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5px;
+}
+.grid1 .city .gradient .text-box a h1, .grid1 .nintendo .gradient .text-box a h1, .grid1 .car .gradient .text-box a h1 {
+  font-weight: bolder;
+  margin: 5px 0;
+}
+.grid1 .city .gradient .text-box h6, .grid1 .nintendo .gradient .text-box h6, .grid1 .car .gradient .text-box h6 {
+  margin: 5px;
+}
+
+.car {
+  background-image: url("assets/car-bg-img.jpg");
+}
+
+.nintendo {
+  background-image: url("assets/nintendo.png");
+}
+
+.city {
+  background-image: url("assets/boston.jpg");
+}
+
 .wrapper {
   width: 100%;
   background-color: pink;
@@ -100,17 +145,17 @@ footer .black {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "car house" "car tree";
+    grid-template-areas: "car nintendo" "car city";
     gap: 4px 4px;
   }
   .grid1 .car {
     grid-area: car;
   }
-  .grid1 .house {
-    grid-area: house;
+  .grid1 .nintendo {
+    grid-area: nintendo;
   }
-  .grid1 .tree {
-    grid-area: tree;
+  .grid1 .city {
+    grid-area: city;
   }
 
   .wrapper {

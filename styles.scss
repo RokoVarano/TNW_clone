@@ -4,12 +4,16 @@ $gray: dimgray;
 
 div {
   background-color: red;
-  opacity: 80%;
+  display: flex;
+  flex-flow: row;
 }
 
 :root {
   margin: 0;
   padding: 0;
+  font-family: ARS Maquette,Helvetica Neue,Arial,sans-serif;
+  font-size: 14px;
+  color: $black;
 }
 
 body {
@@ -71,25 +75,63 @@ header {
 .grid1 {
   @extend %grid-flexbox;
 
-  %item-position {
-    left: 4px;
-    right: 4px;
-    top: 4px;
-    bottom: 4px;
+  %cell-style {
+    margin: 4px 0;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .gradient {
+      color: $white;
+      min-height: 30vh;
+      width: 100%;
+      background: linear-gradient(to top, $black 10%, transparent);
+      flex-direction: column;
+      align-content: flex-end;
+      position: relative;
+
+      .text-box {
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+
+        a {
+          text-decoration: none;
+          color: $white;
+          margin-bottom: 5px;
+          h1 {
+            font-weight: bolder;
+            margin: 5px 0;
+          }
+        }
+        h6 {
+          margin: 5px;
+        }
+      }
+    }
   }
 
-  .car {
-    @extend %item-position;
-  }
-
-  .house {
-    @extend %item-position;
-  }
-
-  .tree {
-    @extend %item-position;
-  }
 }
+
+
+.car {
+  @extend %cell-style;
+  background-image: url("assets/car-bg-img.jpg");
+}
+
+.nintendo {
+  @extend %cell-style;
+  background-image: url("assets/nintendo.png");
+
+}
+
+.city {
+  @extend %cell-style;
+  background-image: url("assets/boston.jpg");
+}
+
 
 .wrapper {
   width: 100%;
