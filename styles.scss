@@ -5,6 +5,7 @@ $gray: dimgray;
 div {
   background-color: red;
   opacity: 80%;
+  display: flex;
 }
 
 :root {
@@ -36,6 +37,18 @@ header {
 
     .left-items {
       justify-self: start;
+      ul{
+        display: none;
+      }
+      .image-left {
+        width: 106px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #000;
+      }
+      .image-left:hover {
+        background: url(assets/animation-background.gif);
+      }
     }
 
     .right-items {
@@ -131,4 +144,3 @@ footer {
     background: $black;
   }
 }
-

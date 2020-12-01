@@ -1,6 +1,7 @@
 div {
   background-color: red;
   opacity: 80%;
+  display: flex;
 }
 
 :root {
@@ -29,6 +30,18 @@ header .white-bar {
 }
 header .white-bar .left-items {
   justify-self: start;
+}
+header .white-bar .left-items ul {
+  display: none;
+}
+header .white-bar .left-items .image-left {
+  width: 106px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #000;
+}
+header .white-bar .left-items .image-left:hover {
+  background: url(assets/animation-background.gif);
 }
 header .white-bar .right-items {
   display: flex;
@@ -92,8 +105,41 @@ footer .black {
   header .black-bar {
     display: flex;
   }
+  header .black-bar .menu-black ul {
+    list-style-type: none;
+    align-self: center;
+  }
+  header .black-bar .menu-black ul li {
+    float: left;
+    padding: 5px;
+  }
+  header .black-bar .menu-black ul li a {
+    display: block;
+    text-decoration: none;
+    color: #d3d3d3;
+  }
+  header .black-bar .menu-black ul li a:hover {
+    color: #fff;
+  }
   header .white-bar .bars {
     display: none;
+  }
+  header .white-bar .left-items ul {
+    list-style-type: none;
+    align-self: center;
+  }
+  header .white-bar .left-items ul li {
+    float: left;
+    padding: 5px;
+  }
+  header .white-bar .left-items ul li a {
+    display: block;
+    text-decoration: none;
+    color: #aaa;
+    margin-left: 15px;
+  }
+  header .white-bar .left-items ul li a:hover {
+    color: #000;
   }
 
   .grid1 {

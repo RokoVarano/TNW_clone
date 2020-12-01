@@ -4,14 +4,47 @@
 
   header {
     .black-bar {
-      display: flex
+      display: flex;
+        .menu-black ul {
+          list-style-type: none;
+          align-self: center;
+          li {
+            float: left;
+            padding: 5px;
+            a {
+              display: block;
+              text-decoration: none;
+              color: #d3d3d3;
+            }
+            a:hover {
+              color: #fff;
+            }
+          }
+        }
     }
 
     .white-bar {
       .bars {
         display: none;
       }
-    }
+      .left-items ul {
+        list-style-type: none;
+        align-self: center;
+          li {
+            float: left;
+            padding: 5px;
+            a {
+              display: block;
+              text-decoration: none;
+              color: #aaa;
+              margin-left: 15px;
+            }
+            a:hover {
+              color: #000;
+            }
+          }
+        }
+     }
   }
 
   .grid1 {
