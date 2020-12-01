@@ -1,46 +1,64 @@
-@media only screen and (max-width: 600px) {
-  header .black-bar {
-    display: none;
+@media only screen and (min-width: 601px) {
+  .spacer3, .spacer2, .spacer1, header .black-bar {
+    display: flex !important;
   }
+
+  .grid3, .grid2, .grid1 {
+    display: grid !important;
+  }
+
   header .white-bar .bars {
-    display: inline-block !important;
+    display: none;
   }
 
   .grid1 {
-    display: flex !important;
-    flex-flow: column;
-    padding: 4px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "car house" "car tree";
+    gap: 4px 4px;
   }
-  .grid1 .tree, .grid1 .house, .grid1 .car {
-    left: 4px;
-    right: 4px;
-    top: 4px;
-    bottom: 4px;
+  .grid1 .car {
+    grid-area: car;
   }
+  .grid1 .house {
+    grid-area: house;
+  }
+  .grid1 .tree {
+    grid-area: tree;
+  }
+
+  .wrapper {
+    max-width: 80%;
+  }
+
   .grid2 {
-    display: flex !important;
-    flex-flow: column;
-    padding: 4px;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
   }
-  .grid2 .card {
-    padding: 8px !important;
-  }
-
-  .grid3 {
-    display: flex !important;
-    flex-flow: column;
+  .grid2 .title {
+    grid-area: 1/1/span 1/span 4;
+    margin-bottom: 24px;
+    height: 30px;
   }
 
-  .spacer {
-    display: none;
+  .spacer1 {
+    margin: 52px;
   }
 
   .spacer2 {
-    display: none;
+    margin: 15px;
   }
 
   .spacer3 {
-    display: none;
+    margin: 134px;
+  }
+
+  .grid3 {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid3 .card {
+    padding: 12px;
   }
 }
 div {
@@ -66,6 +84,7 @@ header nav {
   justify-content: space-between;
 }
 header .black-bar {
+  display: none;
   background: black;
 }
 header .white-bar {
@@ -86,7 +105,6 @@ header .white-bar .right-items .glass {
   background-color: blue;
 }
 header .white-bar .right-items .bars {
-  display: none;
   padding: 16px;
   width: 16px;
   height: 16px;
@@ -94,25 +112,18 @@ header .white-bar .right-items .bars {
 }
 
 .grid1 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "car house" "car tree";
+  display: flex;
+  flex-flow: column;
   padding: 4px;
-  gap: 4px 4px;
 }
-.grid1 .car {
-  grid-area: car;
+.grid1 .tree, .grid1 .house, .grid1 .car {
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
 }
-.grid1 .house {
-  grid-area: house;
-}
-.grid1 .tree {
-  grid-area: tree;
-}
-
 .wrapper {
-  width: 80%;
+  width: 100%;
   background-color: pink;
   padding: 20px;
   display: flex;
@@ -122,40 +133,25 @@ header .white-bar .right-items .bars {
 }
 
 .grid2 {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-flow: column;
+  padding: 4px;
 }
 .grid2 .title {
-  grid-area: 1/1/span 1/span 4;
   margin-bottom: 24px;
   height: 30px;
 }
 .grid2 .card {
-  padding: 12px;
+  padding: 10px;
 }
 
 .spacer {
-  height: 90px;
-  margin: 15px;
-}
-
-.spacer2 {
-  margin: 15px;
-}
-
-.spacer3 {
-  height: 250px;
-  margin: 15px;
+  display: none;
 }
 
 .grid3 {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid3 .card {
-  padding: 12px;
+  display: flex;
+  flex-flow: column;
 }
 
 footer .gray {

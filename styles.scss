@@ -1,4 +1,4 @@
-@use 'mobile';
+@use 'widescreen';
 
 $black: black;
 $white: white;
@@ -29,6 +29,7 @@ header {
   }
 
   .black-bar {
+    display: none;
     background: $black;
   }
 
@@ -52,7 +53,6 @@ header {
       }
 
       .bars {
-        display: none;
         padding: 16px;
         width: 16px;
         height: 16px;
@@ -63,31 +63,32 @@ header {
 }
 
 .grid1 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-          "car house"
-          "car tree"
-  ;
+  display: flex;
+  flex-flow: column;
   padding: 4px;
-  gap: 4px 4px;
+
+  %item-position {
+    left: 4px;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+  }
 
   .car {
-    grid-area: car;
+    @extend %item-position;
   }
 
   .house {
-    grid-area: house;
+    @extend %item-position;
   }
 
   .tree {
-    grid-area: tree;
+    @extend %item-position;
   }
 }
 
 .wrapper {
-  width: 80%;
+  width: 100%;
   background-color: pink;
   padding: 20px;
   display: flex;
@@ -97,47 +98,27 @@ header {
 }
 
 .grid2 {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(4, 1fr);
-
-  //Need to find a way to simplify the code below to make it look more DRY
+  display: flex;
+  flex-flow: column;
+  padding: 4px;
 
   .title {
-    grid-area: 1 / 1 / span 1 / span 4;
     margin-bottom: 24px;
     height: 30px;
   }
 
   .card {
-    padding: 12px;
+    padding: 10px;
   }
 }
 
 .spacer {
-  height: 90px;
-  margin: 15px;
-}
-
-.spacer2 {
-  margin: 15px;
-}
-
-.spacer3 {
-  height: 250px;
-  margin: 15px;
+  display: none;
 }
 
 .grid3 {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(3, 1fr);
-
-  //Need to find a way to simplify the code below to make it look more DRY
-
-  .card {
-    padding: 12px;
-  }
+  display: flex;
+  flex-flow: column;
 }
 
 footer {
@@ -149,5 +130,4 @@ footer {
     background: $black;
   }
 }
-
 

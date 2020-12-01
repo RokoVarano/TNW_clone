@@ -1,0 +1,88 @@
+@media only screen and (min-width: 601px) {
+
+  %display-flex {
+    display: flex !important;
+  }
+
+  %display-grid {
+    display: grid !important;
+  }
+
+  header {
+    .black-bar {
+      @extend %display-flex
+    }
+
+    .white-bar {
+      .bars {
+        display: none;
+      }
+    }
+  }
+
+  .grid1 {
+    @extend %display-grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+            "car house"
+            "car tree";
+    gap: 4px 4px;
+
+    .car {
+      grid-area: car;
+    }
+
+    .house {
+      grid-area: house;
+    }
+
+    .tree {
+      grid-area: tree;
+    }
+  }
+
+  .wrapper {
+    max-width: 80%;
+  }
+
+  .grid2 {
+    @extend %display-grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+
+    .title {
+      grid-area: 1 / 1 / span 1 / span 4;
+      margin-bottom: 24px;
+      height: 30px;
+    }
+  }
+
+  .spacer1 {
+    @extend %display-flex;
+    margin: 52px;
+  }
+
+  .spacer2 {
+    @extend %display-flex;
+    margin: 15px;
+  }
+
+  .spacer3 {
+    @extend %display-flex;
+    margin: 134px;
+  }
+
+
+  .grid3 {
+    @extend %display-grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+
+    //Need to find a way to simplify the code below to make it look more DRY
+
+    .card {
+      padding: 12px;
+    }
+  }
+}
