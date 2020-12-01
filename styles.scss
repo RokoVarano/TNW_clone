@@ -45,27 +45,33 @@ header {
       flex-flow: row;
       justify-self: end;
 
-      .glass {
+      %icons {
         padding: 16px;
         width: 16px;
         height: 16px;
+      }
+
+      .glass {
+        @extend %icons;
         background-color: blue;
       }
 
       .bars {
-        padding: 16px;
-        width: 16px;
-        height: 16px;
+        @extend %icons;
         background-color: skyblue;
       }
     }
   }
 }
 
-.grid1 {
+%grid-flexbox {
   display: flex;
   flex-flow: column;
   padding: 4px;
+}
+
+.grid1 {
+  @extend %grid-flexbox;
 
   %item-position {
     left: 4px;
@@ -98,9 +104,7 @@ header {
 }
 
 .grid2 {
-  display: flex;
-  flex-flow: column;
-  padding: 4px;
+  @extend %grid-flexbox;
 
   .title {
     margin-bottom: 24px;
@@ -117,8 +121,7 @@ header {
 }
 
 .grid3 {
-  display: flex;
-  flex-flow: column;
+  @extend %grid-flexbox;
 }
 
 footer {

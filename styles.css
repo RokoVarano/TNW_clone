@@ -98,24 +98,24 @@ header .white-bar .right-items {
   flex-flow: row;
   justify-self: end;
 }
-header .white-bar .right-items .glass {
+header .white-bar .right-items .bars, header .white-bar .right-items .glass {
   padding: 16px;
   width: 16px;
   height: 16px;
+}
+header .white-bar .right-items .glass {
   background-color: blue;
 }
 header .white-bar .right-items .bars {
-  padding: 16px;
-  width: 16px;
-  height: 16px;
   background-color: skyblue;
 }
 
-.grid1 {
+.grid3, .grid2, .grid1 {
   display: flex;
   flex-flow: column;
   padding: 4px;
 }
+
 .grid1 .tree, .grid1 .house, .grid1 .car {
   left: 4px;
   right: 4px;
@@ -132,11 +132,6 @@ header .white-bar .right-items .bars {
   align-self: center;
 }
 
-.grid2 {
-  display: flex;
-  flex-flow: column;
-  padding: 4px;
-}
 .grid2 .title {
   margin-bottom: 24px;
   height: 30px;
@@ -147,11 +142,6 @@ header .white-bar .right-items .bars {
 
 .spacer {
   display: none;
-}
-
-.grid3 {
-  display: flex;
-  flex-flow: column;
 }
 
 footer .gray {
